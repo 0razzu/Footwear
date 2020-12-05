@@ -75,6 +75,13 @@ public class SixInchBootBuilder implements FootwearBuilder {
     
     
     @Override
+    public SixInchBootBuilder withSize(double size) {
+        setSize(size);
+        return this;
+    }
+    
+    
+    @Override
     public SixInchBoot build() {
         return new SixInchBoot(
                 collar,

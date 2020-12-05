@@ -11,12 +11,14 @@ public interface FootwearBuilder {
     void setHardware(Hardware hardware);
     void setLaces(Laces laces);
     void setOutsole(Outsole outsole);
+    void setSize(double size);
     
     FootwearBuilder withUpper(Upper upper);
     FootwearBuilder withTongue(Tongue tongue);
     FootwearBuilder withHardware(Hardware hardware);
     FootwearBuilder withLaces(Laces laces);
     FootwearBuilder withOutsole(Outsole outsole);
+    FootwearBuilder withSize(double size);
     
     Upper getUpper();
     Tongue getTongue();

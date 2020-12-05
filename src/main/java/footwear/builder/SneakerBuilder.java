@@ -67,6 +67,13 @@ public class SneakerBuilder implements FootwearBuilder {
     
     
     @Override
+    public SneakerBuilder withSize(double size) {
+        setSize(size);
+        return this;
+    }
+    
+    
+    @Override
     public Sneaker build() {
         return new Sneaker(
                 upper == null? new Upper(UpperColor.ALUMINIUM, UpperMaterial.MESH) : upper,

@@ -9,7 +9,6 @@ import lombok.ToString;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public class SixInchBoot extends Footwear {
     private Collar collar;
     private Midsole midsole;
@@ -35,5 +34,20 @@ public class SixInchBoot extends Footwear {
                 new Outsole(getOutsole().getColor(), getOutsole().getType()),
                 getSize()
         );
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "SixInchBoot{" +
+                "collar=" + collar +
+                ", upper=" + getUpper() +
+                ", tongue=" + getTongue() +
+                ", hardware=" + getHardware() +
+                ", laces=" + getLaces() +
+                ", midsole=" + midsole +
+                ", outsole=" + getOutsole() +
+                ", size=" + getSize() +
+                '}';
     }
 }

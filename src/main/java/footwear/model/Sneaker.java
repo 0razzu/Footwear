@@ -4,12 +4,10 @@ package footwear.model;
 import footwear.model.footwear_element.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public class Sneaker extends Footwear {
     private HeelText heelText;
     
@@ -31,5 +29,19 @@ public class Sneaker extends Footwear {
                 new Outsole(getOutsole().getColor(), getOutsole().getType()),
                 getSize()
         );
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "Sneaker{" +
+                "upper=" + getUpper() +
+                ", tongue=" + getTongue() +
+                ", heelText=" + heelText +
+                ", hardware=" + getHardware() +
+                ", laces=" + getLaces() +
+                ", outsole=" + getOutsole() +
+                ", size=" + getSize() +
+                '}';
     }
 }
