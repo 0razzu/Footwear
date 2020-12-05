@@ -4,7 +4,6 @@ package footwear.model;
 import footwear.model.footwear_element.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 
 @Data
@@ -23,15 +22,21 @@ public class SixInchBoot extends Footwear {
     
     
     @Override
-    public Footwear copy() {
+    public SixInchBoot copy() {
+        Upper upper = getUpper();
+        Tongue tongue = getTongue();
+        Hardware hardware = getHardware();
+        Laces laces = getLaces();
+        Outsole outsole = getOutsole();
+        
         return new SixInchBoot(
-                new Collar(collar.getMaterial(), collar.getColor()),
-                new Upper(getUpper().getColor(), getUpper().getMaterial()),
-                new Tongue(getTongue().getColor(), getTongue().getMaterial()),
-                new Hardware(getHardware().getColor(), getHardware().getType()),
-                new Laces(getLaces().getColor()),
-                new Midsole(midsole.getColor()),
-                new Outsole(getOutsole().getColor(), getOutsole().getType()),
+                collar == null? null : new Collar(collar.getMaterial(), collar.getColor()),
+                upper == null? null : new Upper(upper.getColor(), upper.getMaterial()),
+                tongue == null? null : new Tongue(tongue.getColor(), tongue.getMaterial()),
+                hardware == null? null : new Hardware(hardware.getColor(), hardware.getType()),
+                laces == null? null : new Laces(laces.getColor()),
+                midsole == null? null : new Midsole(midsole.getColor()),
+                outsole == null? null : new Outsole(outsole.getColor(), outsole.getType()),
                 getSize()
         );
     }

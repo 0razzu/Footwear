@@ -20,14 +20,17 @@ public class FootwearDemo {
         builder1.setSize(9.5);
         Footwear sneaker = builder1.build();
         System.out.println(sneaker);
-    
+        
         System.out.println();
         
         SixInchBootBuilder builder2 = new SixInchBootBuilder();
         builder2.setMidsole(new Midsole(MidsoleColor.OLIVE));
         builder2.setSize(8);
-        SixInchBoot boot = builder2.build();
-        System.out.println(boot);
+        SixInchBoot boot1 = builder2.build();
+        SixInchBoot boot2 = boot1.copy();
+        boot2.setSize(9);
+        System.out.println(boot1);
+        System.out.println(boot2);
     
         System.out.println();
         

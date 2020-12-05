@@ -19,14 +19,20 @@ public class Sneaker extends Footwear {
     
     
     @Override
-    public Footwear copy() {
+    public Sneaker copy() {
+        Upper upper = getUpper();
+        Tongue tongue = getTongue();
+        Hardware hardware = getHardware();
+        Laces laces = getLaces();
+        Outsole outsole = getOutsole();
+        
         return new Sneaker(
-                new Upper(getUpper().getColor(), getUpper().getMaterial()),
-                new Tongue(getTongue().getColor(), getTongue().getMaterial()),
-                new HeelText(heelText.getText(), heelText.getColor()),
-                new Hardware(getHardware().getColor(), getHardware().getType()),
-                new Laces(getLaces().getColor()),
-                new Outsole(getOutsole().getColor(), getOutsole().getType()),
+                upper == null? null : new Upper(upper.getColor(), upper.getMaterial()),
+                tongue == null? null : new Tongue(tongue.getColor(), tongue.getMaterial()),
+                heelText == null? null : new HeelText(heelText.getText(), heelText.getColor()),
+                hardware == null? null : new Hardware(hardware.getColor(), hardware.getType()),
+                laces == null? null : new Laces(laces.getColor()),
+                outsole == null? null : new Outsole(outsole.getColor(), outsole.getType()),
                 getSize()
         );
     }
