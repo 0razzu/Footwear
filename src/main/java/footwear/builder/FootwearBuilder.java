@@ -18,6 +18,12 @@ public interface FootwearBuilder {
     FootwearBuilder withLaces(Laces laces);
     FootwearBuilder withOutsole(Outsole outsole);
     
+    Upper getUpper();
+    Tongue getTongue();
+    Hardware getHardware();
+    Laces getLaces();
+    Outsole getOutsole();
+    
     Footwear build();
     void reset();
 }

@@ -27,48 +27,48 @@ public class SixInchBootBuilder implements FootwearBuilder {
     private double size;
     
     
-    public FootwearBuilder withCollar(Collar collar) {
+    public SixInchBootBuilder withCollar(Collar collar) {
         setCollar(collar);
         return this;
     }
     
     
     @Override
-    public FootwearBuilder withUpper(Upper upper) {
+    public SixInchBootBuilder withUpper(Upper upper) {
         setUpper(upper);
         return this;
     }
     
     
     @Override
-    public FootwearBuilder withTongue(Tongue tongue) {
+    public SixInchBootBuilder withTongue(Tongue tongue) {
         setTongue(tongue);
         return this;
     }
     
     
     @Override
-    public FootwearBuilder withHardware(Hardware hardware) {
+    public SixInchBootBuilder withHardware(Hardware hardware) {
         setHardware(hardware);
         return this;
     }
     
     
     @Override
-    public FootwearBuilder withLaces(Laces laces) {
+    public SixInchBootBuilder withLaces(Laces laces) {
         setLaces(laces);
         return this;
     }
     
     
-    public FootwearBuilder withMidsole(Midsole midsole) {
+    public SixInchBootBuilder withMidsole(Midsole midsole) {
         setMidsole(midsole);
         return this;
     }
     
     
     @Override
-    public FootwearBuilder withOutsole(Outsole outsole) {
+    public SixInchBootBuilder withOutsole(Outsole outsole) {
         setOutsole(outsole);
         return this;
     }
