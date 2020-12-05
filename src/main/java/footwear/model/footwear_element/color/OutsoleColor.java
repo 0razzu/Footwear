@@ -5,6 +5,8 @@ public enum OutsoleColor {
     BLACK,
     WHITE,
     ALUMINIUM,
+    WHEAT,
+    CINNAMON,
     GREEN_CAMO,
     BLUE_CAMO,
     BLUE,

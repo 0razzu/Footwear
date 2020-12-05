@@ -5,6 +5,7 @@ public enum MidsoleColor {
     BLACK,
     WHITE,
     ALUMINIUM,
+    WHEAT,
     CINNAMON,
     RUBY,
     BLUE,
