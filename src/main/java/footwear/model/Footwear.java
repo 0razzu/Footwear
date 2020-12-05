@@ -4,30 +4,20 @@ package footwear.model;
 import footwear.model.footwear_element.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class Footwear implements Prototype<Footwear> {
-    private Collar collar;
+public abstract class Footwear {
     private Upper upper;
     private Tongue tongue;
     private Hardware hardware;
     private Laces laces;
-    private Midsole midsole;
     private Outsole outsole;
+    private double size;
     
     
-    @Override
-    public Footwear copy() {
-        return new Footwear(
-                new Collar(collar.getMaterial(), collar.getColor()),
-                new Upper(upper.getColor(), upper.getMaterial()),
-                new Tongue(tongue.getColor(), tongue.getMaterial()),
-                new Hardware(hardware.getColor(), hardware.getType()),
-                new Laces(laces.getColor()),
-                new Midsole(midsole.getColor()),
-                new Outsole(outsole.getColor(), outsole.getType())
-        );
-    }
+    public abstract Footwear copy();
 }

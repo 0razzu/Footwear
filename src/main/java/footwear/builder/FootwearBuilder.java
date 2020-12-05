@@ -1,7 +1,6 @@
-package footwear;
+package footwear.builder;
 
 
-import footwear.model.Footwear;
 import footwear.model.footwear_element.*;
 
 
@@ -22,6 +21,5 @@ public interface FootwearBuilder {
     FootwearBuilder withMidsole(Midsole midsole);
     FootwearBuilder withOutsole(Outsole outsole);
     
-    Footwear build();
     void reset();
 }
